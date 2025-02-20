@@ -2,10 +2,18 @@ import { motion } from 'motion/react'
 import Link from 'next/link'
 import React from 'react'
 
+type Props = {
+  posts: {
+    id: string;
+    title: string;
+    thumbnail: string;
+    publishedAt: string;
+  }[];
+  category: string;
+}
 
-
-const BlogList = ({posts,category}) => {
-  console.log(posts)
+const BlogList = ({posts, category}: Props) => {
+  
   return (
     <div>
       <h2 className='font-bold text-4xl '>{category}</h2>

@@ -7,10 +7,14 @@ import React from 'react'
 export const getStaticPaths = async () =>{
     const data = await client.get({endpoint:"route-blog"});
 
-    const paths = data.contents.map((content)=>`/diary/${content.id}`);
+    type Content = {
+        id: string;
+    };
+
+    const paths = data.contents.map((content: Content) => `/diary/${content.id}`);
     return{paths,fallback:false}
 }
-export const getStaticProps = async(context)=>{
+export const getStaticProps = async(context: { params: { id: string } }) =>{
     const id = context.params.id;
     const data = await client.get({endpoint:"route-blog",contentId:id})
     return{
@@ -20,10 +24,17 @@ export const getStaticProps = async(context)=>{
     }
 }
 
-const TechBlogId = ({post}) => {
+type Props = {
+  id: string;
+    title: string;
+    thumbnail: string;
+    publishedAt: string;
+  category: string;
+}
+
+const TechBlogId = (props: Props) => {
   return (
-    <BlogPost post={post}/>
-   
+    <BlogPost post={props}/>
   )
 }
 

@@ -11,9 +11,17 @@ export const getStaticProps:GetStaticProps = async () => {
         },
     }
 }
+type Props = {
+  posts: {
+    id: string;
+    title: string;
+    thumbnail: string;
+    publishedAt: string;
+  }[];
+  category: string;
+}
 
-
-const tech = ({posts}) => {
+const tech = ({posts}:Props) => {
   
   return (
  
