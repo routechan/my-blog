@@ -1,0 +1,111 @@
+$primary-color: #1e1e2f;
+$secondary-color: #93c5fd;
+$text-color: #333;
+$background-color: #fafafa;
+$border-color: #ddd;
+
+
+.main {
+  width: 960px;
+  margin: 0 auto;
+  background: $background-color;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail{
+    font-size: 48px;
+    text-align: center;
+    padding: 12px;
+    background-color:#dbeafe;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 18px 0 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.publishedAt {
+  font-size: 14px;
+  color: darken($text-color, 20%);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.post {
+  & > h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 40px 0 20px;
+  
+  }
+
+  & > h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 40px 0 16px;
+    border-bottom: 2px solid $secondary-color;
+    padding-bottom: 5px;
+    color: $primary-color;
+  }
+
+  & > h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 40px 0 12px;
+    color: darken($primary-color, 10%);
+  }
+
+  & > h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 30px 0 10px;
+    color: darken($primary-color, 15%);
+  }
+
+  & > p {
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+    color: $text-color;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: darken($text-color, 10%);
+    }
+  }
+
+  & > ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    padding-left: 20px;
+    color: $text-color;
+  }
+
+  & > strong {
+    font-weight: bold;
+    color: $secondary-color;
+  }
+
+  & > code {
+    font-family: 'Courier New', monospace;
+    background: #272822;
+    color: #f8f8f2;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  & > pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+  }
+}
