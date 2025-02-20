@@ -34,7 +34,7 @@ type Props = {
 
 const TechBlogId = (props: Props) => {
   return (
-    <BlogPost post={props}/>
+    <BlogPost {...props}/>
   )
 }
 

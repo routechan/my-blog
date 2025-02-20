@@ -4,7 +4,8 @@ import styles from '../src/styles/Home.module.scss';
 
 
 
-const BlogPost = ({post}) => {
+
+const BlogPost = ({post}:any) => {
   return (
    
 
