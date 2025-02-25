@@ -19,16 +19,21 @@ export const getStaticProps = async(context: { params: { id: string } }) =>{
     const data = await client.get({endpoint:"route-blog",contentId:id})
     return{
         props:{
-            post:data,
+            post: {
+                ...data,
+                date: data.publishedAt,
+                content: data.body
+            },
         },
     }
 }
 
 type Props = {
   id: string;
-    title: string;
-    thumbnail: string;
-    publishedAt: string;
+  title: string;
+  thumbnail: string;
+  date: string;
+  content: string;
   category: string;
 }
 
