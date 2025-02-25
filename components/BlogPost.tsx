@@ -6,8 +6,8 @@ interface BlogPostProps {
     title: string;
     date: string;
     content: string;
-    thumbnail:string;
-    // 他に必要なプロパティがあれば追加してください
+    thumbnail: string;
+    // Additional properties can be added here if needed
   }
 }
 
