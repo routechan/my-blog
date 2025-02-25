@@ -32,9 +32,9 @@ type Props = {
   category: string;
 }
 
-const TechBlogId = (props: Props) => {
+const TechBlogId = (post: Props) => {
   return (
-    <BlogPost {...props}/>
+    <BlogPost post={post}/>
   )
 }
 
