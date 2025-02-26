@@ -29,12 +29,12 @@ export const getStaticProps = async(context: { params: { id: string } }) =>{
 }
 
 type Props = {
-  id: string;
   title: string;
-  thumbnail: string;
   date: string;
   content: string;
-  category: string;
+  thumbnail?: string;
+  category?: string;
+  id: string;
 }
 
 const TechBlogId = (post: Props) => {
