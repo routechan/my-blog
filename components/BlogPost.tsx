@@ -6,11 +6,11 @@ interface BlogPostProps {
     title: string;
     date: string;
     content: string;
-    thumbnail?: string;
-    category?: string;
-    id: string;
+    thumbnail: string;
+    // Additional properties can be added here if needed
   }
 }
+
 
 const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
   return (

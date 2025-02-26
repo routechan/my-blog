@@ -34,9 +34,9 @@ type Props = {
   id: string;
 }
 
-const TechBlogId = (post: Props) => {
+const TechBlogId = (props: Props) => {
   return (
-    <BlogPost post={post}/>
+    <BlogPost {...props}/>
   )
 }
 

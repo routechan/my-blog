@@ -24,6 +24,8 @@ export const getStaticProps = async(context: { params: { id: string } }) =>{
     }
 }
 
+
+
 type Props = {
   title: string;
   date: string;
@@ -33,10 +35,11 @@ type Props = {
   id: string;
 }
 
-const TechBlogId = (post: Props) => {
+const TechBlogId = (props: Props) => {
   return (
-    <BlogPost post={post}/>
+    <BlogPost {...props}/>
   )
 }
+
 
 export default TechBlogId
